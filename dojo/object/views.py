@@ -32,6 +32,8 @@ def new_object(request, pid):
         tform = ObjectSettingsForm()
         product_tab = Product_Tab(prod, title="Add Tracked Files to a Product", tab="settings")
 
+        logger.warning("I have added a warning")
+
         return render(request, 'dojo/new_object.html',
                       {'tform': tform,
                        'product_tab': product_tab,
